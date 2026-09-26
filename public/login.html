@@ -1,0 +1,102 @@
+﻿<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Log in or create an account to save your D&amp;D characters, manage your party, and track hit points."
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <title>Log in | D&D Party Tracker</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="/js/api.js" defer></script>
+    <script src="/js/login.js" defer></script>
+  </head>
+
+  <body>
+    <a class="visually-hidden-focusable btn btn-light m-2" href="#main-content"
+      >Skip to main content</a
+    >
+    <main id="main-content" class="container py-4 py-md-5" tabindex="-1">
+      <header class="mb-4">
+        <h1 class="display-5 fw-bold">D&amp;D Party Tracker</h1>
+      </header>
+      
+      <p id="auth-status" role="status" aria-live="polite">Checking your session...</p>
+      <p id="auth-error" class="alert alert-danger" tabindex="-1" role="alert" hidden></p>
+      <button id="retry-auth" class="btn btn-outline-dark mb-3" type="button" hidden>
+        Retry connection
+      </button>
+
+      <div id="auth-forms" class="row g-4" hidden>
+        <div class="col-12 col-md-6">
+          <section class="card p-3 p-md-4 h-100" aria-labelledby="login-heading">
+            <h2 class="h3" id="login-heading">Log in</h2>
+            <form id="login-form" class="d-grid gap-2" aria-describedby="auth-error">
+              <label class="form-label mb-0" for="login-username">Username</label>
+              <input
+                class="form-control"
+                id="login-username"
+                name="username"
+                autocomplete="username"
+                required
+              />
+              <label class="form-label mb-0" for="login-password">Password</label>
+              <input
+                class="form-control"
+                id="login-password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+              />
+              <button class="btn btn-primary mt-2" type="submit">Log in</button>
+            </form>
+          </section>
+        </div>
+
+        <div class="col-12 col-md-6">
+          <section class="card p-3 p-md-4 h-100" aria-labelledby="register-heading">
+            <h2 class="h3" id="register-heading">Create an account</h2>
+            <form id="register-form" class="d-grid gap-2" aria-describedby="auth-error">
+              <label class="form-label mb-0" for="register-username">Username</label>
+              <input
+                class="form-control"
+                id="register-username"
+                name="username"
+                autocomplete="username"
+                minlength="3"
+                maxlength="32"
+                pattern="[A-Za-z0-9_]{3,32}"
+                aria-describedby="username-help"
+                required
+              />
+              <small class="form-text mb-2" id="username-help"
+                >Use 3–32 letters, numbers, or underscores. Usernames are not case-sensitive.</small
+              >
+              <label class="form-label mb-0" for="register-password">Password</label>
+              <input
+                class="form-control"
+                id="register-password"
+                name="password"
+                type="password"
+                autocomplete="new-password"
+                minlength="8"
+                maxlength="72"
+                aria-describedby="password-help"
+                required
+              />
+              <small class="form-text mb-2" id="password-help">Use at least 8 characters.</small>
+              <button class="btn btn-primary mt-2" type="submit">Create account</button>
+            </form>
+          </section>
+        </div>
+        
+      </div>
+      <noscript>Please enable JavaScript to log in and manage your party.</noscript>
+    </main>
+  </body>
+</html>

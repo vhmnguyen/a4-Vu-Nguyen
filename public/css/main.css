@@ -1,0 +1,13 @@
+﻿[hidden] {
+  display: none !important;
+}
+
+#character-list td:first-child {
+  overflow-wrap: anywhere;
+  min-width: 8rem;
+  max-width: 18rem;
+}
+
+.character-actions {
+  min-width: 13rem;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "a4-vu-nguyen",
+  "version": "1.0.0",
+  "description": "D&D Party Tracker for CS 4241 Assignment 4.",
+  "author": "Vu Nguyen",
+  "scripts": {
+    "dev": "vite",
+    "dev:server": "node --watch --env-file-if-exists=.env server.js",
+    "build": "vite build",
+    "start": "node --env-file-if-exists=.env server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "bootstrap": "^5.3.8",
+    "connect-mongo": "^6.0.0",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "mongodb": "^7.6.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "engines": {
+    "node": "^22.12.0 || 24.x"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.63.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.1"
+  }
+}
