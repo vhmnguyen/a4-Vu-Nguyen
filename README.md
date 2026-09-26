@@ -1,33 +1,15 @@
-Assignment 4 - Components
-===
+# D&D Party Tracker
 
-Due: September 25th, by 1:59 PM.
+Hosted application: https://a4-vu-nguyen.onrender.com
 
-For this assignment you will re-implement the client side portion of *either* A2 or A3 using either React or Svelte components. If you choose A3 you only need to use components for the data display / updating; you can leave your login UI as is.
+D&D Party Tracker lets users create an account and manage their own adventuring party. Users can add, view, edit, and delete characters and adjust their hit points. Character status is calculated by the server, and MongoDB stores accounts, characters, and login sessions.
 
-[Svelte Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.svelte.md)  
-[React Tutorial](https://github.com/cs-4241-26a/cs-4241-26a.github.io/blob/main/using.react.md)  
+## Changes from Assignment 3
 
-This project can be implemented on any hosting service (Glitch, DigitalOcean, Heroku etc.), however, you must include all files in your GitHub repo so that the course staff can view them.
+Rebuilt the character management interface using React components for the tracker, character form, character table and rows, and status/error messages. React state and event handlers replace the manual DOM updates from Assignment 3. Vite handles frontend development and production builds, while the Express backend, MongoDB storage, Bootstrap styling, and existing login interface remain in use.
 
-Deliverables
----
+## Development Experience
 
-Do the following to complete this assignment:
-
-1. Implement your project with the above requirements.
-3. Test your project to make sure that when someone goes to your main page on Render/Heroku/etc., it displays correctly.
-4. Ensure that your project has the proper naming scheme `a4-firstname-lastname` so we can find it.
-5. Fork this repository and modify the README to the specifications below. Be sure to add *all* project files.
-6. Create and submit a Pull Request to the original repo. Name the pull request using the following template: `a4-firstname-lastname`.
-
-Sample Readme (delete the above when you're ready to submit, and modify the below so with your links and descriptions)
----
-
-## Your Web Application Title
-
-your hosting link e.g. http://a4-charlieroberts.me
-
-Include a very brief summary of your project here and what you changed / added to assignment #3. Briefly (3–4 sentences) answer the following question: did the new technology improve or hinder the development experience?
-
-Unlike previous assignments, this assignment will be solely graded on whether or not you successfully complete it. Partial credit will be generously given.
+React improved the development experience by keeping the character list, form values, and feedback in state instead of updating individual page elements manually. 
+Splitting the interface into components made the code easier to organize and maintain. 
+Setting up Vite was a bit tough because development needed an API proxy and production needed a separate frontend build.
